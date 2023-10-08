@@ -1,0 +1,129 @@
+@import "./variables.scss";
+
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $inter;
+}
+
+//настройки контейнера
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @media (min-width: 768.5px) {
+    max-width: 728px;
+  }
+  @media (min-width: 1000px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1080px;
+  }
+  @media (min-width: 1300px) {
+    max-width: 1220px;
+  }
+  @media (max-width: 768px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+//подложка для попапов
+.v-overlay--active {
+  .v-overlay__scrim {
+    background-color: #142551 !important;
+    border-color: #142551 !important;
+    opacity: 0.55;
+  }
+}
+
+input::placeholder,
+.txt-standart {
+  font-weight: $weight-regular;
+  line-height: $line-height-main;
+
+  @media (min-width: 360px) {
+    font-size: $fsz-over-small;
+  }
+
+  @media (min-width: 690px) {
+    font-size: $fsz-text;
+  }
+}
+.txt-standart {
+  color: $color-secondary;
+}
+
+.input-standart {
+  display: flex;
+  padding: 11px 16px 13px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid $light-grey;
+  background: $color-main;
+}
+
+// кнопку также можно вынести в отдельный компонент
+.my-button {
+  border-radius: 30px;
+  border: 1px solid $light-grey;
+  background: $color-accent;
+  color: $color-main;
+  padding: 14px 15px 16px 15px;
+  text-align: center;
+  width: 80%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: $hover-blue-button;
+    transition: 0.5s;
+  }
+  &:active {
+    background: $active-blue-button;
+    transition: 0.5s;
+  }
+  &:disabled {
+    background: $disabled-blue-button;
+    transition: 0.5s;
+    color: $color-secondary;
+  }
+}
+
+.validation-error {
+  border: 1px solid $color-error !important;
+  outline: none;
+  border-radius: 8px;
+}
+
+.txt-error {
+  color: $color-error;
+}
+
+.subtitle-section {
+  font-weight: $weight-medium;
+  line-height: $line-height-main;
+  color: $color-secondary;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: 360px) {
+    font-size: $fsz-text;
+  }
+
+  @media (min-width: 690px) {
+    font-size: $fsz-medium;
+  }
+}
+
+.bold-text {
+  font-weight: $weight-bold;
+}

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+$color-main: #ffffff; //основной цвет
+$color-secondary: #0f121c; //дополнительный цвет
+$color-accent: #1555f9; //дополнительный цвет
+$color-disabled: #eaf0fb; //цвет тусклого текса + плейсхолдеров
+$light-grey: #d9e7ff;
+$color-error: #e30000; //цвет для отображения ошибок
+
+$inter: "Inter", sans-serif;
+
+$hover-blue-button: #3d7dff;
+$active-blue-button: #204a92;
+$disabled-blue-button: $color-disabled;
+
+//жирность шрифтов
+$weight-thin: 100;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi: 600;
+$weight-bold: 700;
+
+//line hright
+$line-height-main: 140%;
+$line-height-small: 110%;
+$line-height-medium: 120%;
+
+//шрифты - size
+$fsz-text: 17px; //основное значение шрифта
+$small-fsz: 16px; //второе значение шрифта, использованного на сайте
+$fsz-over-small: 15px;
+$fsz-medium: 22px;

@@ -1,0 +1,91 @@
+@import "@/assets/styles/variables.scss";
+
+.steps {
+  width: 100%;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__wrapper-inputs,
+  &__wrapper-button {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__wrapper-button {
+    justify-content: center;
+  }
+
+  /* Скрываем стандартный чекбокс */
+  .custom-checkbox {
+    display: none;
+
+    &__label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      &::before {
+        content: "";
+        width: 25px; /* Размер чекбокса */
+        min-width: 25px;
+        height: 25px;
+        border: 1px solid gray; /* Серая обводка */
+        background: transparent; /* Прозрачный фон */
+        display: inline-block;
+        position: relative;
+      }
+      &::after {
+        content: "\2713"; /* Галочка в Unicode */
+        font-size: 16px; /* Размер галочки */
+        color: gray; /* Серый цвет галочки */
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Изначально скрываем галочку */
+      }
+
+      span {
+        display: flex;
+        padding-left: 15px;
+        flex-wrap: wrap;
+      }
+    }
+    &:checked + .custom-checkbox__label::after {
+      opacity: 1; /* Показываем галочку при активации */
+      color: gray; /* Серый цвет галочки */
+    }
+  }
+  .wrapper-checkbox {
+    display: flex;
+  }
+  &__column {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-basis: 100%;
+    @media (min-width: 768px) {
+      flex-basis: 49%;
+    }
+  }
+  &__wrapper-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 20px;
+  }
+}

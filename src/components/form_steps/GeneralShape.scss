@@ -1,0 +1,56 @@
+@import "@/assets/styles/variables.scss";
+
+.general-shape {
+  &__progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    height: 10px;
+    border-radius: 10px;
+
+    width: 100%;
+    background-color: $light-grey;
+  }
+
+  &__progress-indicator {
+    height: 10px;
+    background-color: blue;
+    transition: width 0.3s;
+    border-radius: 10px;
+  }
+  &__wraper-form {
+    display: flex;
+    width: 100%;
+    padding: 30px 40px 40px 40px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid var(--light-grey, #d9e7ff);
+    background: var(--white, #fff);
+    box-shadow: 0px 5px 20px 0px rgba(48, 113, 193, 0.16);
+    margin-top: 50px;
+    gap: 30px;
+  }
+  &__go-back {
+    color: $color-accent;
+    font-weight: bold;
+    font-size: $fsz-medium;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__wrapper-progress {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 20px;
+  }
+  .current-step {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
